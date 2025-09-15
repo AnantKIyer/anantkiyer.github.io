@@ -2,68 +2,83 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { Container } from "@/components/ui/container"
+import { Section } from "@/components/ui/section"
+import { Text, Caption } from "@/components/ui/typography"
+import { Grid } from "@/components/ui/grid"
 
 const quickLinks = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about" },
-  { name: "PROJECTS", href: "/projects" },
-  { name: "CONTACT", href: "/contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
+]
+
+const socialLinks = [
+  { name: "GitHub", href: "https://github.com/anantkumariyer" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/anantkumariyer" },
+  { name: "Twitter", href: "https://twitter.com/anantkumariyer" },
 ]
 
 export function Footer() {
   return (
-    <footer className="minimal-border-t mt-16">
-      <div className="max-w-4xl mx-auto px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand */}
-          <div>
-            <div className="text-sm font-mono mb-2">ANANT KIYER</div>
-            <div className="text-xs font-mono text-muted-foreground">
-              Full Stack Developer
+    <footer className="border-t border-border">
+      <Section spacing="md">
+        <Container>
+          <Grid cols={3} gap="lg">
+            {/* Brand */}
+            <div className="space-y-4">
+              <Text variant="h6">Anant Kumar Iyer</Text>
+              <Text variant="small" className="text-muted-foreground">
+                Full Stack Developer crafting digital experiences with modern technologies.
+              </Text>
             </div>
-          </div>
 
-          {/* Quick Links */}
-          <div>
-            <div className="text-xs font-mono text-muted-foreground mb-4">LINKS</div>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-xs font-mono minimal-hover p-1 -m-1"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <div className="text-xs font-mono text-muted-foreground mb-4">CONTACT</div>
-            <div className="space-y-2">
-              <a
-                href="mailto:anant@example.com"
-                className="text-xs font-mono minimal-hover p-1 -m-1 block"
-              >
-                anant@example.com
-              </a>
-              <div className="text-xs font-mono text-muted-foreground">
-                San Francisco, CA
+            {/* Quick Links */}
+            <div className="space-y-4">
+              <Caption>Links</Caption>
+              <div className="space-y-2">
+                {quickLinks.map((link) => (
+                  <div key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Bottom */}
-        <div className="mt-8 pt-8 minimal-border-t text-center">
-          <div className="text-xs font-mono text-muted-foreground">
-            &copy; {new Date().getFullYear()} ANANT KIYER. ALL RIGHTS RESERVED.
+            {/* Social */}
+            <div className="space-y-4">
+              <Caption>Social</Caption>
+              <div className="space-y-2">
+                {socialLinks.map((link) => (
+                  <div key={link.name}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm font-mono text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      {link.name}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Grid>
+
+          {/* Bottom */}
+          <div className="mt-12 pt-8 border-t border-border text-center">
+            <Text variant="small" className="text-muted-foreground">
+              &copy; {new Date().getFullYear()} Anant Kumar Iyer. All rights reserved.
+            </Text>
           </div>
-        </div>
-      </div>
+        </Container>
+      </Section>
     </footer>
   )
 }

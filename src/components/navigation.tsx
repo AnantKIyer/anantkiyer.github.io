@@ -4,24 +4,26 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { Container } from "@/components/ui/container"
+import { Text } from "@/components/ui/typography"
 
 const navigation = [
-  { name: "HOME", href: "/" },
-  { name: "ABOUT", href: "/about" },
-  { name: "PROJECTS", href: "/projects" },
-  { name: "CONTACT", href: "/contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Projects", href: "/projects" },
+  { name: "Contact", href: "/contact" },
 ]
 
 export function Navigation() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm minimal-border-b">
-      <div className="max-w-4xl mx-auto px-8 py-4">
-        <div className="flex justify-between items-center">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <Container>
+        <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="font-mono text-sm">
-            AK
+          <Link href="/" className="font-mono text-sm font-medium">
+            AKI
           </Link>
 
           {/* Navigation Links */}
@@ -30,7 +32,7 @@ export function Navigation() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-mono text-xs minimal-hover p-2 -m-2 ${
+                className={`text-sm font-mono transition-colors hover:text-muted-foreground ${
                   pathname === item.href
                     ? "text-foreground"
                     : "text-muted-foreground"
@@ -45,12 +47,12 @@ export function Navigation() {
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center space-x-4">
             <ThemeToggle />
-            <div className="font-mono text-xs">
-              MENU
+            <div className="text-xs font-mono text-muted-foreground">
+              Menu
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </nav>
   )
 }

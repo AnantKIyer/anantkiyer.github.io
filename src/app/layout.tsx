@@ -9,23 +9,23 @@ import { StructuredData } from "@/components/structured-data";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Anant Kiyer - Full Stack Developer & Designer",
-  description: "Portfolio of Anant Kiyer, a passionate full-stack developer specializing in modern web technologies, React, Next.js, and creating exceptional user experiences.",
-  keywords: ["Anant Kiyer", "Full Stack Developer", "React", "Next.js", "TypeScript", "Portfolio", "Web Developer"],
-  authors: [{ name: "Anant Kiyer" }],
-  creator: "Anant Kiyer",
+  title: "Anant Kumar Iyer - Full Stack Developer & Designer",
+  description: "Portfolio of Anant Kumar Iyer, a passionate full-stack developer specializing in modern web technologies, React, Next.js, and creating exceptional user experiences.",
+  keywords: ["Anant Kumar Iyer", "Full Stack Developer", "React", "Next.js", "TypeScript", "Portfolio", "Web Developer"],
+  authors: [{ name: "Anant Kumar Iyer" }],
+  creator: "Anant Kumar Iyer",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://anantkiyer.github.io",
-    title: "Anant Kiyer - Full Stack Developer & Designer",
-    description: "Portfolio of Anant Kiyer, a passionate full-stack developer specializing in modern web technologies.",
-    siteName: "Anant Kiyer Portfolio",
+    title: "Anant Kumar Iyer - Full Stack Developer & Designer",
+    description: "Portfolio of Anant Kumar Iyer, a passionate full-stack developer specializing in modern web technologies.",
+    siteName: "Anant Kumar Iyer Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Anant Kiyer - Full Stack Developer & Designer",
-    description: "Portfolio of Anant Kiyer, a passionate full-stack developer specializing in modern web technologies.",
+    title: "Anant Kumar Iyer - Full Stack Developer & Designer",
+    description: "Portfolio of Anant Kumar Iyer, a passionate full-stack developer specializing in modern web technologies.",
     creator: "@anantkiyer",
   },
   robots: {
@@ -56,13 +56,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen flex flex-col">
-            <Navigation />
-            <main className="flex-1 pt-16">
-              {children}
-            </main>
-            <Footer />
-          </div>
+                  <div className="min-h-screen flex flex-col">
+                    <Navigation />
+                    <main className="flex-1">
+                      {children}
+                    </main>
+                    <Footer />
+                  </div>
         </ThemeProvider>
       </body>
     </html>

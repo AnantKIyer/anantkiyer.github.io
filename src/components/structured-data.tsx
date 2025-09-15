@@ -4,15 +4,15 @@ export function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Anant Kiyer",
+        "name": "Anant Kumar Iyer",
     "jobTitle": "Full Stack Developer & Designer",
     "description": "Passionate full-stack developer specializing in modern web technologies, React, Next.js, and creating exceptional user experiences.",
     "url": "https://anantkiyer.github.io",
     "image": "https://anantkiyer.github.io/api/placeholder/400/400",
     "sameAs": [
-      "https://github.com/anantkiyer",
-      "https://linkedin.com/in/anantkiyer",
-      "https://twitter.com/anantkiyer"
+      "https://github.com/anantkumariyer",
+      "https://linkedin.com/in/anantkumariyer",
+      "https://twitter.com/anantkumariyer"
     ],
     "knowsAbout": [
       "React",
@@ -34,7 +34,7 @@ export function StructuredData() {
       "addressRegion": "CA",
       "addressCountry": "US"
     },
-    "email": "anant@example.com",
+    "email": "anant.kumar.iyer@example.com",
     "telephone": "+1-555-123-4567"
   }
 

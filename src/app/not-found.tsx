@@ -1,30 +1,42 @@
+"use client"
+
 import Link from "next/link"
+import { Container } from "@/components/ui/container"
+import { Section } from "@/components/ui/section"
+import { Heading, Text } from "@/components/ui/typography"
+import { Card } from "@/components/ui/card"
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center space-y-8 max-w-md mx-auto px-4">
-        <div className="text-6xl font-mono">404</div>
-        
-        <div className="space-y-4">
-          <h1 className="text-sm font-mono">PAGE NOT FOUND</h1>
-          <p className="text-xs font-mono text-muted-foreground">
-            The page you&apos;re looking for doesn&apos;t exist.
-          </p>
-        </div>
+    <Section spacing="xl" className="min-h-screen flex items-center">
+      <Container>
+        <div className="text-center space-y-8 max-w-md mx-auto">
+          <div className="space-y-4">
+            <Heading variant="h1" className="text-6xl">404</Heading>
+            <Text variant="h6">Page Not Found</Text>
+            <Text variant="body" className="text-muted-foreground">
+              The page you&apos;re looking for doesn&apos;t exist.
+            </Text>
+          </div>
 
-        <div className="space-y-2">
-          <Link href="/" className="text-xs font-mono minimal-hover p-2 -m-2 block">
-            GO HOME
-          </Link>
-          <button 
-            onClick={() => window.history.back()}
-            className="text-xs font-mono minimal-hover p-2 -m-2"
-          >
-            GO BACK
-          </button>
+          <Card variant="outlined" padding="lg">
+            <div className="space-y-4">
+              <Link 
+                href="/" 
+                className="text-sm font-mono hover:text-muted-foreground transition-colors block"
+              >
+                Go Home
+              </Link>
+              <button 
+                onClick={() => window.history.back()}
+                className="text-sm font-mono hover:text-muted-foreground transition-colors"
+              >
+                Go Back
+              </button>
+            </div>
+          </Card>
         </div>
-      </div>
-    </div>
+      </Container>
+    </Section>
   )
 }
