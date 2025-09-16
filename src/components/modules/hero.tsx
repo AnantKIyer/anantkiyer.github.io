@@ -61,8 +61,8 @@ export function Hero() {
                   Let&apos;s work together
                 </Text>
                 <Text variant="body">
-                  <a href="mailto:anant.kumar.iyer@example.com" className="hover:text-muted-foreground transition-colors">
-                    anant.kumar.iyer@example.com
+                  <a href="mailto:anant.k.iyer@outlook.com" className="hover:text-muted-foreground transition-colors">
+                    anant.k.iyer@outlook.com
                   </a>
                 </Text>
               </div>

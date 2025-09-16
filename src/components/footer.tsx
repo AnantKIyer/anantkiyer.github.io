@@ -15,9 +15,9 @@ const quickLinks = [
 ]
 
 const socialLinks = [
-  { name: "GitHub", href: "https://github.com/anantkumariyer" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/anantkumariyer" },
-  { name: "Twitter", href: "https://twitter.com/anantkumariyer" },
+  { name: "GitHub", href: "https://github.com/AnantKIyer" },
+  { name: "LinkedIn", href: "https://linkedin.com/in/anant-iyer" },
+  { name: "Twitter", href: "https://twitter.com/" },
 ]
 
 export function Footer() {

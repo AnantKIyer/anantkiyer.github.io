@@ -22,25 +22,20 @@ type ContactFormValues = z.infer<typeof contactFormSchema>
 const contactInfo = [
   {
     label: "Email",
-    value: "anant.kumar.iyer@example.com",
-    href: "mailto:anant.kumar.iyer@example.com"
+    value: "anant.k.iyer@outlook.com",
+    href: "mailto:anant.k.iyer@outlook.com"
   },
   {
     label: "Location", 
-    value: "San Francisco, CA",
+    value: "Bangalore, KA",
     href: null
   },
-  {
-    label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567"
-  }
 ]
 
 const socialLinks = [
-  { label: "GitHub", href: "https://github.com/anantkumariyer" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/anantkumariyer" },
-  { label: "Twitter", href: "https://twitter.com/anantkumariyer" }
+  { label: "GitHub", href: "https://github.com/AnantKIyer" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/anant-iyer" },
+  { label: "Twitter", href: "https://twitter.com/" }
 ]
 
 export function Contact() {
